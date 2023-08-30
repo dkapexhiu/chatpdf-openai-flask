@@ -5,3 +5,4 @@ numpy
 PyMuPDF
 scikit-learn
 openai
+Gunicorn
