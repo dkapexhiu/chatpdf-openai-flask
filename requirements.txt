@@ -6,4 +6,3 @@ PyMuPDF
 scikit-learn
 openai
 Gunicorn
-tensorflow
