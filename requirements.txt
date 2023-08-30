@@ -1,0 +1,7 @@
+flask
+flask-wtf
+tensorflow-hub
+numpy
+PyMuPDF
+scikit-learn
+openai

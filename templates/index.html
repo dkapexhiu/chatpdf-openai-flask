@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF GPT Turbo</title>
+</head>
+<body>
+    <h3>PDF GPT Turbo</h3>
+    <p>PDF GPT Turbo allows you to chat with your PDF files.</p>
+    
+    <form method="POST" enctype="multipart/form-data">
+        <label for="openAI_key">OpenAI API Key:</label>
+        <input type="text" name="openAI_key"><br>
+        
+        <label for="url">PDF URL:</label>
+        <input type="text" name="url"><br>
+        
+        <label for="file">Upload PDF:</label>
+        <input type="file" name="file"><br>
+        
+        <label for="question">Question:</label>
+        <input type="text" name="question"><br>
+        
+        <label for="model">Select Model:</label>
+        <select name="model">
+            <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+            <option value="gpt-3.5-turbo-16k">gpt-3.5-turbo-16k</option>
+            <!-- Add other model options here -->
+        </select><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div>
+        <!-- Display chat history here -->
+        {% for entry in chat_history %}
+        <p><strong>Question:</strong> {{ entry[0] }}</p>
+        <p><strong>Answer:</strong> {{ entry[1] }}</p>
+        <hr>
+        {% endfor %}
+    </div>
+</body>
+</html>
